@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import blimp
 import os
@@ -49,7 +49,12 @@ def mark(config, parser):
   
 def main():
   config = os.path.expanduser('~/.blimp') #if file doesn't exit, create it.
-  parser = ConfigParser.ConfigParser()  
+  parser = ConfigParser.ConfigParser()
+  if len(sys.argv) < 3:
+   exit(''''You must include one of the following options:\n
+   setup - for first time installs
+   reset - if you changed your initial keys
+   mark \'keyword\' - mark a specific task as done\n''') 
   option = sys.argv[1] 
   
   if option == 'setup':
