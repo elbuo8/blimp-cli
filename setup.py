@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='blimp-cli',
-    version='0.4',
+    version='0.5.4',
     author='Yamil Asusta',
     author_email='yamil.asusta@upr.edu',
     scripts=['blimp'],
